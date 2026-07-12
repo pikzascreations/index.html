@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pikza’s Creations | Luxury Gifting & Event Styling</title>
+    <!-- Google Fonts for an Elegant, Premium Look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- Reset & Core Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fbfbfc;
+            color: #2c2c2c;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+            padding: 20px;
+            /* Replace the URL below with your actual main hero image path */
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                        url('https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=2070') no-repeat center center/cover;
+        }
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+        .hero p {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 40px;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        /* --- Buttons --- */
+        .btn {
+            display: inline-block;
+            padding: 14px 36px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-radius: 0;
+        }
+        .btn-primary {
+            background-color: #ffffff;
+            color: #1a1a1a;
+            border: 1px solid #ffffff;
+        }
+        .btn-primary:hover {
+            background-color: transparent;
+            color: #ffffff;
+        }
+        .btn-outline {
+            background-color: transparent;
+            color: #1a1a1a;
+            border: 1px solid #1a1a1a;
+            margin: 10px;
+            min-width: 200px;
+        }
+        .btn-outline:hover {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+        /* --- Section Layouts --- */
+        section {
+            padding: 100px 10%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* --- About Section --- */
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .about-text h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+        .about-text p {
+            font-size: 1.05rem;
+            color: #555555;
+            font-weight: 300;
+        }
+        .about-image {
+            width: 100%;
+            height: 500px;
+            /* Replace with an image of your choice */
+            background: url('https://images.unsplash.com/photo-1549417229-aa67d3263c09?q=80&w=2070') no-repeat center center/cover;
+        }
+
+        /* --- Showroom Gallery Section --- */
+        .gallery h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .gallery-item {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+            background-color: #eaeaea;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.04);
+        }
+        .gallery-item .label {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            background: rgba(0,0,0,0.4);
+            padding: 5px 15px;
+        }
+
+        /* --- Contact Section --- */
+        .contact {
+            text-align: center;
+            background-color: #f4f4f6;
+            max-width: 100%;
+            padding: 80px 20px;
+        }
+        .contact h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+        .contact p {
+            font-weight: 300;
+            margin-bottom: 40px;
+            color: #555555;
+        }
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.8rem;
+            color: #888888;
+            letter-spacing: 1px;
+            border-top: 1px solid #eaeaea;
+        }
+
+        /* --- Responsive Tweaks --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .hero p { font-size: 0.85rem; letter-spacing: 2px; }
+            .about-container { grid-template-columns: 1fr; gap: 40px; }
+            .about-image { height: 350px; order: 2; }
+            .about-text { order: 1; text-align: center; }
+            section { padding: 60px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. HERO SECTION -->
+    <header class="hero">
+        <h1>Curating Beautiful Experiences</h1>
+        <p>Luxury Gifting &bull; Grazing Experiences &bull; Event Styling</p>
+        <a href="#enquire" class="btn btn-primary">Enquire Now</a>
+    </header>
+
+    <!-- 2. ABOUT SECTION -->
+    <section class="about">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>Why Pikza’s Creations Exists</h2>
+                <p>At Pikza’s Creations, we believe every milestone deserves to be celebrated beautifully.</p>
+                <br>
+                <p>Whether it’s a birthday, graduation, corporate achievement, or an intimate gathering, we thoughtfully curate luxury gifting and experiences that leave lasting memories.</p>
+            </div>
+            <div class="about-image"></div>
+        </div>
+    </section>
+
+    <!-- 3. SHOWROOM GALLERY -->
+    <section class="gallery">
+        <h2>Our Work</h2>
+        <div class="gallery-grid">
+            <!-- Item 1: Luxury Gifting -->
+            <div class="gallery-item">
+                <!-- Replace with your luxury box image path -->
+                <img src="https://images.unsplash.com/photo-1549417229-aa67d3263c09?q=80&w=500" alt="Luxury Gifting">
+                <div class="label">Luxury Gifting</div>
+            </div>
+            <!-- Item 2: Grazing Experiences -->
+            <div class="gallery-item">
+                <!-- Replace with your grazing platter/table image path -->
+                <img src="https://images.unsplash.com/photo-1541532713592-79a0317b6b77?q=80&w=500" alt="Grazing Experiences">
+                <div class="label">Grazing Experiences</div>
+            </div>
+            <!-- Item 3: Event Styling -->
+            <div class="gallery-item">
+                <!-- Replace with your event decor image path -->
+                <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?q=80&w=500" alt="Event Styling">
+                <div class="label">Event Styling</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. CONNECT & ENQUIRE SECTION -->
+    <section class="contact" id="enquire">
+        <h2>Let's Create Something Beautiful Together</h2>
+        <p>Ready to elevate your next milestone? Connect with us directly via your preferred platform to discuss your custom curation.</p>
+        
+        <div class="contact-buttons">
+            <!-- Replace with your actual WhatsApp Link, Phone, and Email -->
+            <a href="https://wa.me/27050316969" target="_blank" class="btn btn-outline">💬 WhatsApp</a>
+            <a href="tel:27050316969" class="btn btn-outline">📞 Call Us</a>
+            <a href="mailto:hello@pikzaceations.co.za?subject=Pikza's Creations Enquiry" class="btn btn-outline">✉️ Email Enquiry</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        &copy; 2026 Pikza’s Creations. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
