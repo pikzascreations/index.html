@@ -3,37 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pikza’s Creations | Luxury Gifting & Event Styling</title>
-    <!-- Google Fonts for an Elegant, Premium Look -->
+    <title>Pikza's Creations | Curating Beautiful Experiences</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-    
-    <style>
-        /* --- Reset & Core Styles --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #fbfbfc;
-            color: #2c2c2c;
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
 
-        /* --- Hero Section --- */
-        .hero {
-            position: relative;
-            height: 100vh;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+    <header>
+        <div class="logo-text">PIKZA'S CREATIONS</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#showroom">Showroom</a></li>
+                <li><a href="#enquire">Enquire</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Full Screen Landing with an Elegant Black & Gold Luxury Event Setup background -->
+    <section id="home" class="hero" style="background-image: url('https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?q=80&w=1200&auto=format&fit=crop');">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <!-- Your logo text acts as a temporary placeholder until you add your logo.png file -->
+            <div style="font-family: 'Cinzel', serif; font-size: 2.5rem; letter-spacing: 6px; margin-bottom: 20px;">PC</div>
+            <h1>Curating Beautiful Experiences</h1>
+            <p class="sub-taglines">Luxury Gifting &bull; Grazing Experiences &bull; Event Styling</p>
+            <a href="#enquire" class="btn-enquire">Enquire Now</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container-small">
+            <h2>Our Purpose</h2>
+            <hr class="divider">
+            <p>At Pikza’s Creations, we believe every milestone deserves to be celebrated beautifully.</p>
+            <p>Whether it’s a birthday, graduation, corporate achievement or intimate gathering, we thoughtfully curate luxury gifting and experiences that leave lasting memories.</p>
+        </div>
+    </section>
+
+    <section id="showroom" class="showroom">
+        <div class="container">
+            <h2>The Showroom</h2>
+            <p class="section-subtitle">A glimpse into our curated designs and luxury setups</p>
+            <hr class="divider">
+            
+            <div class="gallery-grid">
+                <!-- Luxury Ribbon Gifting Box Image -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=600&auto=format&fit=crop" alt="Luxury Gifting Box">
+                    <div class="item-overlay"><h3>Luxury Gifting</h3></div>
+                </div>
+                <!-- Fine Dining / Grazing Spread Image -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1541532713592-79a0317b6b77?q=80&w=600&auto=format&fit=crop" alt="Bespoke Grazing Display">
+                    <div class="item-overlay"><h3>Grazing Experiences</h3></div>
+                </div>
+                <!-- Elegant Floral Event Decor Image -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=600&auto=format&fit=crop" alt="Elegant Event Setups">
+                    <div class="item-overlay"><h3>Event Styling</h3></div>
+                </div>
+                <!-- Intimate Luxury Celebration Detail Image -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?q=80&w=600&auto=format&fit=crop" alt="Curated Celebration Details">
+                    <div class="item-overlay"><h3>Bespoke Curation</h3></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="enquire">
+        <div class="container">
+            <h2>Bring Your Vision to Life</h2>
+            <p class="footer-subtitle">Contact us directly to discuss your custom gifting or event design requirements.</p>
+            
+            <div class="contact-channels">
+                <a href="https://wa.me/27500316969" target="_blank" class="channel-card">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                    <p>(050) 031 6969</p>
+                </a>
+                
+                <a href="tel:0500316969" class="channel-card">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Call Us</span>
+                    <p>(050) 031 6969</p>
+                </a>
+                
+                <a href="mailto:info@pikzascreations.com" class="channel-card">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Email</span>
+                    <p>Enquire via Mail</p>
+                </a>
+            </div>
+
+            <div class="social-follow">
+                <a href="https://instagram.com/pikzas_creations" target="_blank">
+                    <i class="fa-brands fa-instagram"></i> @pikzas_creations
+                </a>
+            </div>
+            
+            <hr class="footer-divider">
+            <p class="copyright">&copy; 2026 Pikza's Creations. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
             color: #ffffff;
             padding: 20px;
             /* Replace the URL below with your actual main hero image path */
